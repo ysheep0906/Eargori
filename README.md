@@ -1,6 +1,6 @@
-# eargori
+# Eargori
 
-A new Flutter project.
+청각장애인을 위한 보조 어플리케이션
 
 ## Getting Started
 
