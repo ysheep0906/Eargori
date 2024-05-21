@@ -1,9 +1,11 @@
+import 'package:eargori/widgets/BottomBar.dart';
 import 'package:eargori/widgets/Header.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   static const homeUrl = '/home';
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +21,9 @@ class HomeScreen extends StatelessWidget {
           buildFavoritesList(),
         ],
       ),
+      bottomNavigationBar: BottomBar(),
+      floatingActionButton: BottomBarState().homeButton(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

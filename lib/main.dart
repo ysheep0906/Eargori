@@ -12,12 +12,13 @@ class Eargori extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Eargori',
-        theme: ThemeData(
-          primaryColor: Colors.white,
-          fontFamily: 'SF Pro Text',
-        ),
-        home: HomeScreen());
+      debugShowCheckedModeBanner: false,
+      title: 'Eargori',
+      theme: ThemeData(
+        primaryColor: Colors.white,
+        fontFamily: 'SF Pro Text',
+      ),
+      home: HomeScreen(),
+    );
   }
 }
