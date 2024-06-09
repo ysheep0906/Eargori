@@ -1,4 +1,3 @@
-import 'package:eargori/controllers/MainController.dart';
 import 'package:eargori/views/LoginScreen.dart';
 import 'package:flutter/material.dart';
 

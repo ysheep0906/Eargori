@@ -89,10 +89,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
     if (text.length <= maxLength) {
       return text;
     } else {
-      return text.substring(0, 26) +
-          '\n' +
-          text.substring(26, maxLength) +
-          '...';
+      return text.substring(0, 23) + '...';
     }
   }
 
@@ -121,7 +118,8 @@ class _CommunityScreenState extends State<CommunityScreen> {
       child: OutlinedButton(
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return ShowArticleScreen(data: articles[index]);
+            return ShowArticleScreen(
+                data: articles[_children.length - index - 1]);
           }));
         },
         style: OutlinedButton.styleFrom(
@@ -151,9 +149,10 @@ class _CommunityScreenState extends State<CommunityScreen> {
                       SizedBox(width: 10),
                       Text(author,
                           style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600)),
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          )),
                     ],
                   ),
                   Text(
@@ -180,6 +179,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     truncatedText,

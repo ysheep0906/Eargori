@@ -30,8 +30,10 @@ class DynamicTextFieldsState extends State<DynamicTextFields> {
       title: TextField(
         controller: controller,
         onChanged: (text) {
-          if (index == textFields.length - 1) {
-            widget.onSearch(text);
+          if (controller.text.length > 0) {
+            if (index == textFields.length - 1) {
+              widget.onSearch(text);
+            }
           }
         },
         onSubmitted: (text) {

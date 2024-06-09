@@ -1,3 +1,4 @@
+import 'package:eargori/controllers/CommunityController.dart';
 import 'package:eargori/services/CreateArticleService.dart';
 import 'package:eargori/widgets/CreatePlace.dart';
 import 'package:eargori/widgets/DeletePlace.dart';
@@ -22,7 +23,8 @@ class CreateArticleScreenState extends State<CreateArticleScreen> {
           titleController.text,
           descriptionController.text,
           placeNames[_selectedPlace]['_id']);
-      Navigator.pop(context);
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => CommunityController()));
       print(response);
     } catch (e) {
       print(e);
